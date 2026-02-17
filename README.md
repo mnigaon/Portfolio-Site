@@ -85,8 +85,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
-Feel free to reach out via [email](mailto:your-email@example.com) or connect on [LinkedIn](https://linkedin.com/in/yourprofile).
-
----
-
-Built with ❤️ using Next.js and Tailwind CSS
+Feel free to reach out via [email](mailto:wps.gaon@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/gaon-sun-305128262/).
