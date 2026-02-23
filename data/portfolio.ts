@@ -84,7 +84,6 @@ export const portfolio = {
         tools: [
             "Git / GitHub",
             "VS Code",
-            "Cursor",
         ],
     },
     experiences: [],
