@@ -6,9 +6,11 @@ import { motion } from "framer-motion";
 
 export function Skills() {
     const titles: Record<string, string> = {
-        frontend: "Frontend",
-        backend: "Backend & Infra",
+        languages: "Languages",
+        frameworks: "Frameworks & Libraries",
+        cloud: "Cloud & Backend",
         design: "Design",
+        ai: "AI & APIs",
         tools: "Tools",
     };
 

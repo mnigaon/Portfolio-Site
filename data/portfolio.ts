@@ -56,20 +56,30 @@ export const portfolio = {
         },
     ],
     skills: {
-        frontend: [
-            "React",
+        languages: [
             "JavaScript",
             "TypeScript",
+        ],
+        frameworks: [
+            "React",
+            "Next.js",
             "Tailwind CSS",
         ],
-        backend: [
-            "Firebase (Authentication, Firestore, Storage)",
+        cloud: [
+            "Firebase (Auth, Firestore, Storage)",
             "Vercel",
         ],
         design: [
             "Figma",
             "Canva",
             "Adobe XD",
+        ],
+        ai: [
+            "OpenAI API",
+            "OpenWeather API",
+            "TMDB API",
+            "Google APIs",
+            "REST API Integration",
         ],
         tools: [
             "Git / GitHub",
