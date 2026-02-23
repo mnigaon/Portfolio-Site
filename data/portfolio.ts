@@ -43,6 +43,17 @@ export const portfolio = {
             ],
             image: "/reciipick.jpg"
         },
+        {
+            num: "04",
+            title: "WeatherFit",
+            description: "Weather-based outfit & activity recommendations. Delivers smart, real-time suggestions tailored to current weather conditions to help users dress and plan their day perfectly.",
+            tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "OpenWeather API", "Vercel"],
+            links: [
+                { label: "GitHub ↗", href: "https://github.com/mnigaon/WeatherFit" },
+                { label: "Live Demo ↗", href: "https://weather-fit-eta.vercel.app" },
+            ],
+            image: "/weatherfit.jpg"
+        },
     ],
     skills: {
         frontend: [
