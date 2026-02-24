@@ -23,7 +23,29 @@ const syne = Syne({
 
 export const metadata: Metadata = {
     title: "Gaon Sun - Portfolio",
-    description: "Software Developer & UI/UX Designer",
+    description: "Software Developer & UI/UX Designer. Building accessible and pixel-perfect digital experiences at the intersection of design and engineering.",
+    metadataBase: new URL("https://jein-portfolio-delta.vercel.app"),
+    openGraph: {
+        title: "Gaon Sun - Portfolio",
+        description: "Software Developer & UI/UX Designer. Building accessible and pixel-perfect digital experiences.",
+        url: "https://jein-portfolio-delta.vercel.app",
+        siteName: "Gaon Sun Portfolio",
+        images: [
+            {
+                url: "/og-image.png",
+                width: 1200,
+                height: 630,
+                alt: "Gaon Sun - Software Developer & UI/UX Designer",
+            },
+        ],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Gaon Sun - Portfolio",
+        description: "Software Developer & UI/UX Designer. Building accessible and pixel-perfect digital experiences.",
+        images: ["/og-image.png"],
+    },
 };
 
 export default function RootLayout({
