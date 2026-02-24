@@ -12,14 +12,14 @@ export const portfolio = {
     projects: [
         {
             num: "01",
-            title: "Dayzzy",
-            description: "An all-in-one schedule management web app designed to streamline your daily tasks and calendar events. Features intuitive drag-and-drop organization and real-time synchronization.",
-            tags: ["React", "JavaScript", "Firebase", "Context API", "Google APIs"],
+            title: "WeatherFit",
+            description: "Weather-based outfit & activity recommendations. Delivers smart, real-time suggestions tailored to current weather conditions to help users dress and plan their day perfectly.",
+            tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "OpenWeather API", "Vercel"],
             links: [
-                { label: "GitHub ↗", href: "https://github.com/mnigaon/Dayzzy" },
-                { label: "Live Demo ↗", href: "https://tasky-d81f5.web.app/" },
+                { label: "GitHub ↗", href: "https://github.com/mnigaon/WeatherFit" },
+                { label: "Visit Site ↗", href: "https://weather-fit-eta.vercel.app" },
             ],
-            image: "/dayzzy.jpg"
+            image: "/weatherfit.jpg"
         },
         {
             num: "02",
@@ -28,7 +28,7 @@ export const portfolio = {
             tags: ["React", "TypeScript", "Tailwind CSS", "TMDB API", "Firebase", "Framer Motion"],
             links: [
                 { label: "GitHub ↗", href: "https://github.com/mnigaon/CineVault" },
-                { label: "Live Demo ↗", href: "https://cine-vault-alpha.vercel.app" },
+                { label: "Visit Site ↗", href: "https://cine-vault-alpha.vercel.app" },
             ],
             image: "/cinevault.jpg"
         },
@@ -39,20 +39,20 @@ export const portfolio = {
             tags: ["React", "JavaScript", "OpenAI API", "Vercel"],
             links: [
                 { label: "GitHub ↗", href: "https://github.com/mnigaon/ReciiPick" },
-                { label: "Live Demo ↗", href: "https://recii-pick.vercel.app" },
+                { label: "Visit Site ↗", href: "https://recii-pick.vercel.app" },
             ],
             image: "/reciipick.jpg"
         },
         {
             num: "04",
-            title: "WeatherFit",
-            description: "Weather-based outfit & activity recommendations. Delivers smart, real-time suggestions tailored to current weather conditions to help users dress and plan their day perfectly.",
-            tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "OpenWeather API", "Vercel"],
+            title: "Dayzzy",
+            description: "An all-in-one schedule management web app designed to streamline your daily tasks and calendar events. Features intuitive drag-and-drop organization and real-time synchronization.",
+            tags: ["React", "JavaScript", "Firebase", "Context API", "Google APIs"],
             links: [
-                { label: "GitHub ↗", href: "https://github.com/mnigaon/WeatherFit" },
-                { label: "Live Demo ↗", href: "https://weather-fit-eta.vercel.app" },
+                { label: "GitHub ↗", href: "https://github.com/mnigaon/Dayzzy" },
+                { label: "Visit Site ↗", href: "https://tasky-d81f5.web.app/" },
             ],
-            image: "/weatherfit.jpg"
+            image: "/dayzzy.jpg"
         },
     ],
     skills: {

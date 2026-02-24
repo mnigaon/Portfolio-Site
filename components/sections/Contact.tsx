@@ -3,10 +3,12 @@
 import { portfolio } from "@/data/portfolio";
 import { fadeUp } from "@/lib/motion";
 import { motion } from "framer-motion";
+import { ParticlesBackground } from "@/components/ui/ParticlesBackground";
 
 export function Contact() {
     return (
-        <section id="contact" className="py-[120px] flex flex-col justify-center min-h-[60vh]">
+        <section id="contact" className="relative overflow-hidden py-[120px] flex flex-col justify-center min-h-[60vh]">
+            <ParticlesBackground />
             <motion.p
                 initial="hidden"
                 whileInView="visible"

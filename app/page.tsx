@@ -15,8 +15,31 @@ const CustomCursor = () => {
     const ringRef = useRef<HTMLDivElement>(null);
     const mouse = useRef({ x: 0, y: 0 });
     const ring = useRef({ x: 0, y: 0 });
+    // 실제 마우스 이동이 감지되면 true, 터치가 감지되면 false로 전환
+    const [hasMouse, setHasMouse] = useState(false);
 
     useEffect(() => {
+        // movementX/Y가 모두 0이면 터치로 인한 합성 이벤트 → 무시
+        const onMouseMove = (e: MouseEvent) => {
+            if (e.movementX === 0 && e.movementY === 0) return;
+            setHasMouse(true);
+        };
+        // 터치 or 마우스가 viewport를 벗어나면 즉시 비활성화
+        const onHide = () => setHasMouse(false);
+
+        window.addEventListener("mousemove", onMouseMove);
+        window.addEventListener("touchstart", onHide, { passive: true });
+        document.addEventListener("mouseleave", onHide);
+        return () => {
+            window.removeEventListener("mousemove", onMouseMove);
+            window.removeEventListener("touchstart", onHide);
+            document.removeEventListener("mouseleave", onHide);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!hasMouse) return;
+
         const handleMouseMove = (e: MouseEvent) => {
             mouse.current = { x: e.clientX, y: e.clientY };
             if (dotRef.current) {
@@ -40,7 +63,9 @@ const CustomCursor = () => {
             window.removeEventListener("mousemove", handleMouseMove);
             cancelAnimationFrame(animFrame);
         };
-    }, []);
+    }, [hasMouse]);
+
+    if (!hasMouse) return null;
 
     return (
         <>
@@ -61,15 +86,35 @@ const CustomCursor = () => {
 };
 
 const MouseGlow = () => {
-    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+    const [mousePos, setMousePos] = useState({ x: -9999, y: -9999 });
+    const [hasMouse, setHasMouse] = useState(false);
 
     useEffect(() => {
+        const onMouseMove = (e: MouseEvent) => {
+            if (e.movementX === 0 && e.movementY === 0) return;
+            setHasMouse(true);
+        };
+        const onHide = () => setHasMouse(false);
+        window.addEventListener("mousemove", onMouseMove);
+        window.addEventListener("touchstart", onHide, { passive: true });
+        document.addEventListener("mouseleave", onHide);
+        return () => {
+            window.removeEventListener("mousemove", onMouseMove);
+            window.removeEventListener("touchstart", onHide);
+            document.removeEventListener("mouseleave", onHide);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!hasMouse) return;
         const handleMouseMove = (e: MouseEvent) => {
             setMousePos({ x: e.clientX, y: e.clientY });
         };
         window.addEventListener("mousemove", handleMouseMove);
         return () => window.removeEventListener("mousemove", handleMouseMove);
-    }, []);
+    }, [hasMouse]);
+
+    if (!hasMouse) return null;
 
     return (
         <div
