@@ -24,11 +24,11 @@ const syne = Syne({
 export const metadata: Metadata = {
     title: "Gaon Sun - Portfolio",
     description: "Software Developer & UI/UX Designer. Building accessible and pixel-perfect digital experiences at the intersection of design and engineering.",
-    metadataBase: new URL("https://jein-portfolio-delta.vercel.app"),
+    metadataBase: new URL("https://itsgaon.com/"),
     openGraph: {
         title: "Gaon Sun - Portfolio",
         description: "Software Developer & UI/UX Designer. Building accessible and pixel-perfect digital experiences.",
-        url: "https://jein-portfolio-delta.vercel.app",
+        url: "https://itsgaon.com/",
         siteName: "Gaon Sun Portfolio",
         images: [
             {
