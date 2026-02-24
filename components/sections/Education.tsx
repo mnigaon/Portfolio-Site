@@ -26,34 +26,11 @@ export function Education() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeUp}
-                        className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-12 items-center"
+                        className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8 lg:gap-12 items-center"
                     >
-                        <div className="flex flex-col gap-4">
-                            <span className="font-mono text-[0.7rem] text-[var(--accent)] tracking-[0.1em] uppercase">
-                                {edu.period}
-                            </span>
-                            <h3 className="font-head text-[1.8rem] font-bold tracking-tight text-white leading-tight">
-                                {edu.school}
-                            </h3>
-                            <p className="text-[1.1rem] font-medium text-[#9090a8]">
-                                {edu.degree}
-                            </p>
-                            <div className="flex items-center gap-3 text-[0.85rem] text-[#5a5a72] font-mono">
-                                <span>{edu.location}</span>
-                                <span className="w-1 h-1 rounded-full bg-white/10" />
-                                <a
-                                    href={edu.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-[var(--accent)] hover:underline"
-                                >
-                                    Visit Website ↗
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="relative group">
-                            <div className="aspect-[4/3] bg-[var(--surface)] border border-white/5 rounded-lg overflow-hidden relative transition-transform duration-500 group-hover:scale-[1.02]">
+                        {/* 이미지: 모바일에서 1순위, 데스크톱에서 2순위 */}
+                        <div className="relative group order-1 lg:order-2">
+                            <div className="aspect-[16/10] lg:aspect-[4/3] bg-[var(--surface)] border border-white/5 rounded-lg overflow-hidden relative transition-transform duration-500 group-hover:scale-[1.02]">
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent z-10 opacity-40" />
                                 <Image
                                     src={edu.image}
@@ -63,6 +40,31 @@ export function Education() {
                                 />
                             </div>
                             <div className="absolute inset-[-8px] border border-[var(--accent)] rounded-lg opacity-10 -z-10 group-hover:opacity-20 transition-opacity" />
+                        </div>
+
+                        {/* 텍스트: 모바일에서 2순위, 데스크톱에서 1순위 */}
+                        <div className="flex flex-col gap-4 order-2 lg:order-1">
+                            <span className="font-mono text-[0.7rem] text-[var(--accent)] tracking-[0.1em] uppercase">
+                                {edu.period}
+                            </span>
+                            <h3 className="font-head text-[1.5rem] lg:text-[1.8rem] font-bold tracking-tight text-white leading-tight">
+                                {edu.school}
+                            </h3>
+                            <p className="text-[1rem] lg:text-[1.1rem] font-medium text-[#9090a8]">
+                                {edu.degree}
+                            </p>
+                            <div className="flex flex-wrap items-center gap-3 text-[0.85rem] text-[#5a5a72] font-mono">
+                                <span>{edu.location}</span>
+                                <span className="w-1 h-1 rounded-full bg-white/10 hidden sm:block" />
+                                <a
+                                    href={edu.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[var(--accent)] hover:underline"
+                                >
+                                    Visit Website ↗
+                                </a>
+                            </div>
                         </div>
                     </motion.div>
                 ))}

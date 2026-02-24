@@ -45,6 +45,17 @@ export const portfolio = {
         },
         {
             num: "04",
+            title: "Palette",
+            description: "Personal color diagnosis and palette management platform. Users can discover their seasonal color through an interactive test and explore curated color recommendations.",
+            tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Firebase", "PWA", "NextAuth", "Framer Motion", "Next-intl"],
+            links: [
+                { label: "GitHub ↗", href: "https://github.com/mnigaon/Palette" },
+                { label: "Visit Site ↗", href: "https://palette-taupe.vercel.app" },
+            ],
+            image: "/palette.jpg"
+        },
+        {
+            num: "05",
             title: "Dayzzy",
             description: "An all-in-one schedule management web app designed to streamline your daily tasks and calendar events. Features intuitive drag-and-drop organization and real-time synchronization.",
             tags: ["React", "JavaScript", "Firebase", "Context API", "Google APIs"],
@@ -64,6 +75,7 @@ export const portfolio = {
             "React",
             "Next.js",
             "Tailwind CSS",
+            "Framer Motion",
         ],
         cloud: [
             "Firebase (Auth, Firestore, Storage)",
@@ -80,6 +92,8 @@ export const portfolio = {
             "TMDB API",
             "Google APIs",
             "REST API Integration",
+            "NextAuth.js",
+            "Next-intl (i18n)",
         ],
         tools: [
             "Git / GitHub",
