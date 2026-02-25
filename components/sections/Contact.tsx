@@ -7,8 +7,10 @@ import { ParticlesBackground } from "@/components/ui/ParticlesBackground";
 
 export function Contact() {
     return (
-        <section id="contact" className="relative overflow-hidden py-[120px] flex flex-col justify-center min-h-[60vh]">
-            <ParticlesBackground />
+        <section id="contact" className="relative py-[120px] flex flex-col justify-center min-h-[60vh]">
+            <div className="absolute top-0 bottom-0 left-[-6vw] right-[-50vw] lg:left-[-260px] pointer-events-none z-0">
+                <ParticlesBackground />
+            </div>
             <motion.p
                 initial="hidden"
                 whileInView="visible"

@@ -41,25 +41,7 @@ html {
     ::-webkit-scrollbar-thumb:hover {
         background: #00c99a;
     }
-
-    /* 커스텀 커서 - 기본 커서 완전 숨김 */
-    html,
-    body,
-    *,
-    a,
-    button,
-    input,
-    select,
-    textarea,
-    label,
-    [role="button"],
-    [tabindex],
-    summary {
-        cursor: none !important;
-    }
 }
-
-
 
 body {
     font-family: var(--font-dm-sans), system-ui, sans-serif;
