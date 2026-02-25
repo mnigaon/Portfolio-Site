@@ -4,6 +4,7 @@ import { portfolio } from "@/data/portfolio";
 import { fadeUp } from "@/lib/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Lanyard from "./Lanyard";
 
 export function About() {
     return (
@@ -19,7 +20,6 @@ export function About() {
             </motion.p>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-                {/* 이미지: 모바일에서 1번, 데스크탑에서 2번 (오른쪽) */}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -27,16 +27,9 @@ export function About() {
                     variants={fadeUp}
                     className="relative order-1 lg:order-2"
                 >
-                    <div className="w-full aspect-[3/4] bg-[var(--surface)] border border-white/5 rounded overflow-hidden relative group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#00e5b414] to-[#7b61ff0f] z-10 opacity-50 group-hover:opacity-20 transition-opacity duration-500" />
-                        <Image
-                            src="/gaonsun.jpg"
-                            alt="Gaon Sun"
-                            fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
+                    <div className="w-full aspect-[4/5] md:aspect-[3/4] rounded overflow-hidden relative">
+                        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
                     </div>
-                    <div className="absolute inset-[-4px] border border-[var(--accent)] rounded opacity-30 translate-x-2 translate-y-2 -z-10" />
                 </motion.div>
 
                 {/* 텍스트 + 버튼: 모바일에서 2번 (이미지 아래), 데스크탑에서 1번 (왼쪽) */}
