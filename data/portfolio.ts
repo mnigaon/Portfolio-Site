@@ -65,6 +65,17 @@ export const portfolio = {
             ],
             image: "/dayzzy.jpg"
         },
+        {
+            num: "06",
+            title: "Candid",
+            description: "A professional restaurant review platform that emphasizes honest opinions and community-driven insights. Built with a robust full-stack architecture featuring secure authentication and seamless data management.",
+            tags: ["Next.js 15", "TypeScript", "Tailwind CSS", "Prisma", "NextAuth", "Vercel"],
+            links: [
+                { label: "GitHub ↗", href: "https://github.com/mnigaon/Candid" },
+                { label: "Visit Site ↗", href: "https://candid-mauve.vercel.app" },
+            ],
+            image: "/candid.jpg"
+        },
     ],
     skills: {
         languages: [
