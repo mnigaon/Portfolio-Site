@@ -45,17 +45,6 @@ export const portfolio = {
         },
         {
             num: "04",
-            title: "Palette",
-            description: "Personal color diagnosis and palette management platform. Users can discover their seasonal color through an interactive test and explore curated color recommendations.",
-            tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Firebase", "PWA", "NextAuth", "Framer Motion", "Next-intl"],
-            links: [
-                { label: "GitHub ↗", href: "https://github.com/mnigaon/Palette" },
-                { label: "Visit Site ↗", href: "https://palette-taupe.vercel.app" },
-            ],
-            image: "/palette.jpg"
-        },
-        {
-            num: "05",
             title: "Dayzzy",
             description: "An all-in-one schedule management web app designed to streamline your daily tasks and calendar events. Features intuitive drag-and-drop organization and real-time synchronization.",
             tags: ["React", "JavaScript", "Firebase", "Context API", "Google APIs"],
@@ -66,7 +55,7 @@ export const portfolio = {
             image: "/dayzzy.jpg"
         },
         {
-            num: "06",
+            num: "05",
             title: "Candid",
             description: "A professional restaurant review platform that emphasizes honest opinions and community-driven insights. Built with a robust full-stack architecture featuring secure authentication and seamless data management.",
             tags: ["Next.js 15", "TypeScript", "Tailwind CSS", "Prisma", "NextAuth", "Vercel"],
