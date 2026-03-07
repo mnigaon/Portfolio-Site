@@ -25,10 +25,10 @@ export function About() {
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={fadeUp}
-                    className="relative order-1 lg:order-2"
+                    className="relative order-1 lg:order-2 z-10"
                 >
-                    <div className="w-full aspect-[4/5] md:aspect-[3/4] rounded overflow-hidden relative">
-                        <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+                    <div className="w-full aspect-[4/5] md:aspect-[3/4] rounded relative z-10">
+                        <Lanyard position={[0, 0, 24]} gravity={[0, -40, 0]} />
                     </div>
                 </motion.div>
 

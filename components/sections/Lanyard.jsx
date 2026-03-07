@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import { Canvas, extend, useFrame } from '@react-three/fiber';
 import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei';
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier';
@@ -131,6 +131,35 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
         myPhoto.needsUpdate = true;
     }, [myPhoto, cardBox]);
 
+    // 사진의 모서리를 둥글게 만들기 위한 ShapeGeometry 생성
+    const roundedPlaneGeometry = useMemo(() => {
+        const { w, h } = cardBox;
+        const r = 0.04; // 둥글기 정도 (필요에 따라 조절 가능)
+        const shape = new THREE.Shape();
+        shape.moveTo(-w / 2 + r, -h / 2);
+        shape.lineTo(w / 2 - r, -h / 2);
+        shape.quadraticCurveTo(w / 2, -h / 2, w / 2, -h / 2 + r);
+        shape.lineTo(w / 2, h / 2 - r);
+        shape.quadraticCurveTo(w / 2, h / 2, w / 2 - r, h / 2);
+        shape.lineTo(-w / 2 + r, h / 2);
+        shape.quadraticCurveTo(-w / 2, h / 2, -w / 2, h / 2 - r);
+        shape.lineTo(-w / 2, -h / 2 + r);
+        shape.quadraticCurveTo(-w / 2, -h / 2, -w / 2 + r, -h / 2);
+
+        const geometry = new THREE.ShapeGeometry(shape);
+
+        // UV 매핑이 없을 경우 텍스처가 보이지 않으므로 수동 계산
+        const pos = geometry.attributes.position;
+        const uvs = [];
+        for (let i = 0; i < pos.count; i++) {
+            uvs.push((pos.getX(i) + w / 2) / w);
+            uvs.push((pos.getY(i) + h / 2) / h);
+        }
+        geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
+
+        return geometry;
+    }, [cardBox.w, cardBox.h]);
+
     const [curve] = useState(
         () =>
             new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()])
@@ -220,8 +249,8 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
                         <mesh
                             position={[cardBox.cx, cardBox.cy, cardBox.fz ?? 0.01]}
                             renderOrder={1}
+                            geometry={roundedPlaneGeometry}
                         >
-                            <planeGeometry args={[cardBox.w, cardBox.h]} />
                             <meshBasicMaterial
                                 map={myPhoto}
                                 depthTest={false}

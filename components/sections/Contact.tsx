@@ -50,7 +50,7 @@ export function Contact() {
                 className="flex gap-5 flex-wrap"
             >
                 <a href={portfolio.social.email} className="btn btn--primary">
-                    Send Email →
+                    Email →
                 </a>
                 <a href={portfolio.social.github} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
                     GitHub
