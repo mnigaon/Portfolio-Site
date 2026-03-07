@@ -50,14 +50,17 @@ export function Sidebar() {
             </nav>
 
             <div className="flex flex-col gap-4">
+                <a href={portfolio.social.email} className="font-mono text-[0.68rem] text-[#8a8aa3] tracking-[0.08em] hover:text-[#00e5b4] transition-colors">
+                    Email
+                </a>
                 <a href={portfolio.social.github} target="_blank" rel="noopener noreferrer" className="font-mono text-[0.68rem] text-[#8a8aa3] tracking-[0.08em] hover:text-[#00e5b4] transition-colors">
                     GitHub
                 </a>
                 <a href={portfolio.social.linkedin} target="_blank" rel="noopener noreferrer" className="font-mono text-[0.68rem] text-[#8a8aa3] tracking-[0.08em] hover:text-[#00e5b4] transition-colors">
                     LinkedIn
                 </a>
-                <a href={portfolio.social.email} className="font-mono text-[0.68rem] text-[#8a8aa3] tracking-[0.08em] hover:text-[#00e5b4] transition-colors">
-                    Email
+                <a href={portfolio.social.instagram} target="_blank" rel="noopener noreferrer" className="font-mono text-[0.68rem] text-[#8a8aa3] tracking-[0.08em] hover:text-[#00e5b4] transition-colors">
+                    Instagram
                 </a>
             </div>
         </aside>

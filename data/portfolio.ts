@@ -7,6 +7,7 @@ export const portfolio = {
         email: "mailto:wps.gaon@gmail.com",
         linkedin: "https://www.linkedin.com/in/gaon-sun-305128262/",
         github: "https://github.com/mnigaon",
+        instagram: "https://www.instagram.com/qaonsonnee/",
         resume: "/resume.pdf"
     },
     projects: [

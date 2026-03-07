@@ -52,11 +52,14 @@ export function Contact() {
                 <a href={portfolio.social.email} className="btn btn--primary">
                     Send Email →
                 </a>
+                <a href={portfolio.social.github} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
+                    GitHub
+                </a>
                 <a href={portfolio.social.linkedin} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
                     LinkedIn
                 </a>
-                <a href={portfolio.social.github} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
-                    GitHub
+                <a href={portfolio.social.instagram} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
+                    Instagram
                 </a>
             </motion.div>
         </section>

@@ -65,6 +65,7 @@ export function MobileNav() {
                         <div className="absolute bottom-12 left-8 right-8 flex gap-6 mt-auto border-t border-white/5 pt-8">
                             <a href={portfolio.social.github} target="_blank" rel="noopener noreferrer" className="font-mono text-sm text-[#8a8aa3] uppercase tracking-widest">GH</a>
                             <a href={portfolio.social.linkedin} target="_blank" rel="noopener noreferrer" className="font-mono text-sm text-[#8a8aa3] uppercase tracking-widest">LI</a>
+                            <a href={portfolio.social.instagram} target="_blank" rel="noopener noreferrer" className="font-mono text-sm text-[#8a8aa3] uppercase tracking-widest">IG</a>
                             <a href={portfolio.social.email} className="font-mono text-sm text-[#8a8aa3] uppercase tracking-widest">EM</a>
                         </div>
                     </motion.div>
