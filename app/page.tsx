@@ -4,7 +4,6 @@ import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
-import { Projects } from "@/components/sections/Projects";
 import dynamic from "next/dynamic";
 import { Education } from "@/components/sections/Education";
 import { Contact } from "@/components/sections/Contact";
@@ -14,6 +13,11 @@ import Waves from "@/components/Waves";
 // SSR 비활성화 → Hydration 에러 방지
 const Skills = dynamic(
     () => import("@/components/sections/Skills").then((m) => m.Skills),
+    { ssr: false }
+);
+
+const Projects = dynamic(
+    () => import("@/components/sections/Projects").then((m) => m.Projects),
     { ssr: false }
 );
 

@@ -3,7 +3,7 @@
 import { portfolio } from "@/data/portfolio";
 import { fadeUp } from "@/lib/motion";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type FilterKey = "all" | "frontend" | "backend" | "tools";
 
