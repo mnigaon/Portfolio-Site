@@ -62,6 +62,12 @@ export function Sidebar() {
                 <a href={portfolio.social.instagram} target="_blank" rel="noopener noreferrer" className="font-mono text-[0.68rem] text-[#8a8aa3] tracking-[0.08em] hover:text-[#00e5b4] transition-colors">
                     Instagram
                 </a>
+
+                <div className="mt-4 pt-4 border-t border-white/5">
+                    <span className="font-mono text-[0.65rem] text-[#00e5b4] tracking-[0.1em] uppercase">
+                        v26.0
+                    </span>
+                 </div>
             </div>
         </aside>
     );
