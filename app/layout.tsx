@@ -48,14 +48,18 @@ export const metadata: Metadata = {
     },
 };
 
+import ClientLayout from "@/components/ClientLayout";
+
 export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={`${dmSans.variable} ${dmMono.variable} ${syne.variable}`}>
-            <body className="antialiased">{children}</body>
+        <html lang="en" className={`${dmSans.variable} ${dmMono.variable} ${syne.variable}`} suppressHydrationWarning>
+            <body className="antialiased">
+                <ClientLayout>{children}</ClientLayout>
+            </body>
         </html>
     );
 }
