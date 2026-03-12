@@ -60,8 +60,8 @@ export const Preloader = ({ onComplete }: PreloaderProps) => {
                 <div className="overflow-hidden py-4">
                     <div
                         ref={welcomeRef}
-                        className="text-[clamp(32px,8vw,80px)] font-bold tracking-tight uppercase text-center px-6 leading-[1.1]"
-                        style={{ fontFamily: 'var(--font-syne), sans-serif' }}
+                        className="text-[clamp(32px,8vw,80px)] font-bold tracking-tight uppercase text-center px-6 leading-[1.1] opacity-0"
+                        style={{ fontFamily: 'var(--font-syne), sans-serif', opacity: 0 }}
                     >
                         welcome!
                     </div>
