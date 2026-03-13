@@ -109,7 +109,7 @@ export function Projects() {
                                         href={link.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-[var(--accent)] flex items-center gap-1 group/link hover:text-white transition-colors"
+                                        className="font-mono text-[0.75rem] tracking-[0.1em] uppercase text-[var(--accent)] flex items-center gap-1 group/link hover:underline transition-colors"
                                     >
                                         {link.label}
                                     </a>
