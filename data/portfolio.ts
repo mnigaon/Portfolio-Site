@@ -1,6 +1,6 @@
 export const portfolio = {
     name: "Gaon Sun",
-    title: "Software Developer & UI/UX Designer",
+    title: "but you can call me <span class='text-white'>Jenny</span>",
     intro: "Hello, I am —",
     description: "Beyond simple coding, I design <em>accessible and pixel-perfect digital experiences</em>. I balance user experience and robust code at the intersection of design and engineering.",
     social: {
