@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 
-export function usePageVisibility(missYouMessage: string = "miss you already.. 👾") {
+export function usePageVisibility(missYouMessage: string = "Miss you already... 👾") {
     useEffect(() => {
         let originalTitle = document.title;
         let isAway = false;
-        
+
         const handleVisibilityChange = () => {
             if (document.hidden) {
                 // Determine the current title just in case it was updated by routing

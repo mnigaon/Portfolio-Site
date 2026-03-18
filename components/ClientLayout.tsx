@@ -3,6 +3,7 @@
 import { usePreloader } from "@/hooks/usePreloader";
 import { usePageVisibility } from "@/hooks/usePageVisibility";
 import { Preloader } from "@/components/Preloader";
+import { CustomCursor } from "@/components/ui/CustomCursor";
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -34,6 +35,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
                 className={`transition-opacity duration-1000 ease-in-out ${contentVisible ? "opacity-100" : "opacity-0"}`}
             >
                 {children}
+                <CustomCursor />
             </div>
         </ThemeProvider>
     );

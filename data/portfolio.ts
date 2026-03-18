@@ -55,6 +55,7 @@ export const portfolio = {
             ],
             image: "/dayzzy.jpg"
         },
+        /*
         {
             num: "05",
             title: "Candid",
@@ -66,6 +67,7 @@ export const portfolio = {
             ],
             image: "/candid.jpg"
         },
+        */
     ],
     skills: {
         frontend: [
@@ -78,7 +80,6 @@ export const portfolio = {
             { name: "Next.js", level: 80 },
         ],
         backend: [
-            { name: "Node.js", level: 70 },
             { name: "Python", level: 75 },
             { name: "Vercel", level: 85 },
             { name: "Firebase", level: 80 },
@@ -93,6 +94,12 @@ export const portfolio = {
             { name: "CapCut", level: 75 },
             { name: "DaVinci Resolve", level: 65 },
             { name: "Figma", level: 80 },
+        ],
+        currentlyWorkingOn: [
+            { name: "Node.js", level: 50 },
+            { name: "PostgreSQL", level: 45 },
+            { name: "Java", level: 40 },
+            { name: "React Native", level: 35 },
         ],
     },
     experiences: [],
