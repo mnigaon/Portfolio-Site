@@ -97,7 +97,7 @@ export default function GSLogo3D({ isHovered, mousePosition, onExited, text = "G
 
   return (
     <div 
-      className="absolute top-[110%] left-[70%] md:left-[75%] z-50 pointer-events-none hidden md:block" 
+      className="absolute top-[135%] left-[70%] md:left-[75%] z-50 pointer-events-none hidden md:block" 
       style={{ transform: "translateY(-50%)" }}
     >
       <div 
