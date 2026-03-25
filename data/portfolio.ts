@@ -4,7 +4,7 @@ export const portfolio = {
     intro: "Hello, I am —",
     description: "Beyond simple coding, I design <em>accessible and pixel-perfect digital experiences</em>. I balance user experience and robust code at the intersection of design and engineering.",
     social: {
-        email: "mailto:wps.gaon@gmail.com",
+        email: "mailto:gaonseon@icloud.com",
         linkedin: "https://www.linkedin.com/in/gaon-sun-305128262/",
         github: "https://github.com/mnigaon",
         instagram: "https://www.instagram.com/qaonsonnee/",
